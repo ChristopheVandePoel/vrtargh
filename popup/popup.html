@@ -1,62 +1,108 @@
-<!-- popup/popup.html -->
+<!-- popup/popup.html - Updated with better styling for the buttons -->
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <style>
-    body {
-      width: 300px;
-      font-family: Arial, sans-serif;
-      padding: 10px;
-    }
-    #blockedTextsList {
-      margin-top: 10px;
-      max-height: 200px;
-      overflow-y: auto;
-    }
-    .blocked-text-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 5px;
-      padding: 5px;
-      background-color: #f5f5f5;
-      border-radius: 3px;
-    }
-    .delete-btn {
-      background-color: #ff6b6b;
-      color: white;
-      border: none;
-      border-radius: 3px;
-      padding: 2px 5px;
-      cursor: pointer;
-    }
-    form {
-      display: flex;
-      margin-bottom: 10px;
-    }
-    #newBlockedText {
-      flex-grow: 1;
-      margin-right: 5px;
-      padding: 5px;
-    }
-    button {
-      padding: 5px 10px;
-    }
-  </style>
+    <meta charset="utf-8">
+    <style>
+        body {
+            width: 300px;
+            font-family: Arial, sans-serif;
+            padding: 10px;
+        }
+
+        #blockedTextsList {
+            margin-top: 10px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .blocked-text-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+            padding: 5px;
+            background-color: #f5f5f5;
+            border-radius: 3px;
+        }
+
+        .delete-btn {
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            padding: 2px 5px;
+            cursor: pointer;
+        }
+
+        .restore-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            padding: 2px 5px;
+            cursor: pointer;
+        }
+
+        form {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        #newBlockedText {
+            flex-grow: 1;
+            margin-right: 5px;
+            padding: 5px;
+        }
+
+        button {
+            padding: 5px 10px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+
+        #clearAllBtn {
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        #restorePageBtn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
 </head>
+
 <body>
-  <h2>Text Blocker</h2>
-  <form id="addForm">
-    <input type="text" id="newBlockedText" placeholder="Enter text to block...">
-    <button type="submit">Add</button>
-  </form>
-  
-  <div>
-    <h3>Currently blocked:</h3>
-    <div id="blockedTextsList"></div>
-  </div>
-  
-  <script src="popup.js"></script>
+    <h2>Text Blocker</h2>
+    <form id="addForm">
+        <input type="text" id="newBlockedText" placeholder="Enter text to block...">
+        <button type="submit">Add</button>
+    </form>
+
+    <div>
+        <h3>Currently blocked:</h3>
+        <div id="blockedTextsList"></div>
+    </div>
+
+    <div class="button-container">
+        <button id="restorePageBtn">Restore Page</button>
+    </div>
+
+    <script src="popup.js"></script>
 </body>
+
 </html>
