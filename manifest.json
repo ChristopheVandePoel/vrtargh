@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Text Blocker",
+  "version": "1.0",
+  "description": "Blocks list items containing specified text",
+  "permissions": ["<all_urls>", "storage"],
+  "browser_action": {
+    "default_title": "Text Blocker",
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.vrt.be/*", "*://vrt.be/*"],
+      "js": ["content-script.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
